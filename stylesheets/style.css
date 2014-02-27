@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+.hidden{
+  display: none;
+}
+
 .left{
   float: left;
 }
@@ -34,7 +38,7 @@ h1{
 }
 
 #header{
-  background: #ebf0e8;
+  background: #E6E6E6;
 }
 
 #header img{
@@ -62,16 +66,41 @@ article p{
 }
 
 #sign-up-form{
-  display: inline-block;
-  margin-left: 50px;
-  width: 50%;
+  width: 100%;
 }
 
-#sign-up-form input[type="email"]{
-  width: 65%;
+.form-cell{
+  float: left;
+}
+
+.form-col-1,
+.form-col-2{
+  width: 35%;
   margin-right: 5%;
+}
+
+.form-col-3{
+}
+
+.form-row{
+  width: 100%;
+  overflow: hidden;
+}
+
+#sign-up-form input,
+#sign-up-form span{
   padding-top: 11px;
   padding-bottom: 11px;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+
+#sign-up-form span{
+  margin-right: calc( 5% + 2px);
+  line-height: 14px;
+}
+
+#sign-up-form input{
   padding-left: 5px;
   border: 1px solid #4E4F53;
   border-radius: 5px;
@@ -79,11 +108,12 @@ article p{
 
 #sign-up-form button{
   background: #4E4F53;
+  border-radius: 5px;
   border: none;
   color: #fff;
   font-size: 12px;
-  width: 25%;
-  padding: 10px 0;
+  padding: 10px 35px;
+  cursor: pointer;
 }
 
 #first{
@@ -117,20 +147,24 @@ article p{
 }
 
 .header-row .table-cell{
+  font-family: "Open Sans", Arial;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .table-cell {
+  font-family: "Open Sans", Arial;
   width: 20%;
   display: table-cell;
+  font-size: 12px;
 }
 
 .wide-cell { width: 40%; }
 .table-row { display: table-row; }
 
 #footer{
-  background: #ebf0e8;
-  color: #222;
+  background: #E6E6E6;
+  color: #4E4F53;
   padding-top: 20px;
 }
 
