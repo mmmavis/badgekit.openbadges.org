@@ -33,7 +33,7 @@ h1{
 
 .wrapper{
   margin: 0 auto;
-  width: 960px;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -43,12 +43,16 @@ h1{
 
 #header img{
   margin: 25px 0;
+  width: 200px;
+  position: relative;
+  left: -10px;
 }
 
 .container{
   margin: 0 auto;
-  width: 100%;
+  width: 960px;
   position: relative;
+  overflow: hidden;
 }
 
 .container article{
@@ -62,7 +66,8 @@ article p{
 }
 
 #form-container{
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #sign-up-form{
@@ -117,8 +122,8 @@ article p{
 }
 
 #first{
-  background: url(../images/badgekit_splashimage.png) #029DD9 center center no-repeat;
-  height: 450px;
+  background: url(../images/badgekit_splashimage.png) #029DD9 center bottom no-repeat;
+  min-height: 450px;
   margin-bottom: 100px;
 }
 
@@ -136,6 +141,7 @@ article p{
   width: 60%;
   display: table;
   padding: 0 20px;
+  float: right;
 }
 
 .table a{
@@ -182,3 +188,35 @@ article p{
   height: auto;
   margin-left: -20px;
 }
+
+
+
+/* === Responsive ======= */
+
+@media only screen and (max-width: 960px) {
+  .container{
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+
+@media only screen and (max-width: 760px) {
+  #sign-up-form button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #first .text {
+    width: 50%;
+  }
+  #open-badges-logo {
+    width: 100%;
+  }
+  .table {
+    float: left;
+    width: 100%;
+    padding: 0;
+  }
+}
+
