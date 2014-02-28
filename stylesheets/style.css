@@ -170,9 +170,8 @@ footer a {
 }
 
 #footer-links section {
-  width: 20%;
   float: left;
-  margin-right: 5%;
+  margin-right: 10%;
 }
 
 #footer-links ul {
