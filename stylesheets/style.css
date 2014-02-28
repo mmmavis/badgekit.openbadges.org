@@ -44,8 +44,6 @@ h1{
 #header img{
   margin: 25px 0;
   width: 200px;
-  position: relative;
-  left: -10px;
 }
 
 .container{
@@ -128,7 +126,7 @@ article p{
 }
 
 #first{
-  background: url(../images/badgekit_splashimage.png) #029DD9 center bottom no-repeat;
+  background: url(../images/BadgeKit-Splash-Slide.png) #029DD9 center bottom no-repeat;
   min-height: 450px;
   margin-bottom: 100px;
 }
@@ -168,6 +166,7 @@ footer a {
   font-family: "Open Sans", Arial;
   font-weight: bold;
   font-size: 14px;
+  margin-bottom: 15px;
 }
 
 #footer-links section {
@@ -189,7 +188,7 @@ footer a {
 }
 
 #open-badges-logo img{
-  width: 200px;
+  width: 250px;
 }
 
 #supported-by {
@@ -252,7 +251,7 @@ footer a {
   }
 
   #first {
-    background: url(../images/badgekit_splashimage-640px-wide.png) #0193d4 center bottom no-repeat;
+    background: url(../images/BadgeKit-Splash-Slide-640px.png) #0193d4 center bottom no-repeat;
   }
 
   #first .text {
@@ -263,11 +262,13 @@ footer a {
 
 @media only screen and (max-width: 480px) {
   #first {
-    background: url(../images/badgekit_splashimage-480px-wide.png) #0193d4 center bottom no-repeat;
+    background: url(../images/BadgeKit-Splash-Slide-480px.png) #0193d4 center 100% no-repeat;
+    padding-bottom: 200px;
   }
 
   #first .text {
     width: 100%;
+    position: relative;
   }
 
   #footer-links section {
