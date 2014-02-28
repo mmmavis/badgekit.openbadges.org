@@ -20,22 +20,24 @@
       <div id="form-container">
         <div class="container">
           <form id="sign-up-form">
-            <div class="form-row">
-              <span class="form-cell form-col-1">Sign up now!</span>
-              <input class="form-cell form-col-2" type="email" name="email" placeholder="Enter your email" />
-              <button class="form-cell form-col-3" type="submit">Sign Up</button>
+            <div id="form-fields">
+              <div class="form-row">
+                <span class="form-cell form-col-1">Sign up now!</span>
+                <input class="form-cell form-col-2" type="email" name="email" placeholder="Enter your email" />
+              </div>
+              <div id="expandable-section" class="hidden">
+                <div class="form-row">
+                  <input class="form-cell form-col-1" type="text" name="org-name" placeholder="Organization name" />
+                  <input class="form-cell form-col-2" type="text" name="contact-name" placeholder="Contact name" />
+                </div>
+                <div class="form-row">
+                  <input class="form-cell form-col-1" type="text" name="org-size" placeholder="Organization size" />
+                  <input class="form-cell form-col-2" type="text" name="contact-position" placeholder="Contact position" />
+                </div>
+              </div>
             </div>
-            <div id="expandable-section" class="hidden">
-              <div class="form-row">
-                <input class="form-cell form-col-1" type="text" name="org-name" placeholder="Organization name" />
-                <input class="form-cell form-col-2" type="text" name="contact-name" placeholder="Contact name" />
-                <div class="form-col-3">&nbsp;</div>
-              </div>
-              <div class="form-row">
-                <input class="form-cell form-col-1" type="text" name="org-size" placeholder="Organization size" />
-                <input class="form-cell form-col-2" type="text" name="contact-position" placeholder="Contact position" />
-                <div class="form-col-3"></div>
-              </div>
+            <div id="button-container">
+              <button class="form-cell" type="submit">Sign Up</button>
             </div>
           </form>
         </div>

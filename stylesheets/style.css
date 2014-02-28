@@ -80,16 +80,13 @@ article p{
 
 .form-col-1,
 .form-col-2{
-  width: 35%;
+  width: 43%;
   margin-right: 5%;
-}
-
-.form-col-3{
 }
 
 .form-row{
   width: 100%;
-  overflow: hidden;
+  float: left;
 }
 
 #sign-up-form input,
@@ -111,7 +108,16 @@ article p{
   border-radius: 5px;
 }
 
-#sign-up-form button{
+#form-fields {
+  width: 80%;
+  float: left;
+}
+
+#button-container {
+  float: left;
+}
+
+#button-container button{
   background: #4E4F53;
   border-radius: 5px;
   border: none;
@@ -220,3 +226,42 @@ article p{
   }
 }
 
+@media only screen and (max-width: 640px) {
+  #sign-up-form .form-col-1,
+  #sign-up-form .form-col-2 {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding-left: auto;
+    padding-right: auto;
+  }
+
+  #form-fields {
+    width: 100%;
+  }
+
+  #button-container {
+    width: 100%;
+  }
+
+  #button-container button {
+    width: 100%;
+  }
+
+  #first {
+    background: url(../images/badgekit_splashimage-640px-wide.png) #0193d4 center bottom no-repeat;
+  }
+
+  #first .text {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #first {
+    background: url(../images/badgekit_splashimage-480px-wide.png) #0193d4 center bottom no-repeat;
+  }
+  #first .text {
+    width: 100%;
+  }
+}
