@@ -143,59 +143,63 @@ article p{
 
 /* === Footer ======= */
 
-.table {
-  width: 60%;
-  display: table;
-  padding: 0 20px;
-  float: right;
-}
-
-.table a{
-  color: #777;
-}
-
-.header-row {
-  line-height: 3em;
-}
-
-.header-row .table-cell{
-  font-family: "Open Sans", Arial;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.table-cell {
-  font-family: "Open Sans", Arial;
-  width: 20%;
-  display: table-cell;
-  font-size: 12px;
-}
-
-.wide-cell { width: 40%; }
-.table-row { display: table-row; }
-
-#footer{
+footer {
   background: #E6E6E6;
   color: #4E4F53;
   padding-top: 20px;
 }
 
-.footer-container {
-  padding: 30px 9% 15px 9%;
+footer a {
+  color: #4E4F53;
 }
 
-.footer-container .footnote-container,
-.footer-container .footer-menu {
-  margin: 0 4%;
+#footer-logo-container {
+  width: 35%;
+  float: left;
+}
+
+#footer-links {
+  width: 65%;
+  float: right;
+}
+
+#footer-links h5 {
+  font-family: "Open Sans", Arial;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#footer-links section {
+  width: 20%;
+  float: left;
+  margin-right: 5%;
+}
+
+#footer-links ul {
+  list-style-type: none;
+  font-family: "Open Sans", Arial;
+  font-size: 12px;
+  padding-left: 0;
 }
 
 .openbadges-logo {
-  width: 20%;
+  width: 100%;
   height: auto;
   margin-left: -20px;
 }
 
+#open-badges-logo img{
+  width: 200px;
+}
 
+#supported-by {
+  font-family: "Open Sans", Arial;
+  font-size: 12px;
+  position: relative;
+  left: 55px;
+  top: -15px;
+  width: 100%;
+}
 
 /* === Responsive ======= */
 
@@ -223,6 +227,11 @@ article p{
     float: left;
     width: 100%;
     padding: 0;
+  }
+
+  #footer-logo-container,
+  #footer-links {
+    width: 100%;
   }
 }
 
@@ -255,13 +264,19 @@ article p{
   #first .text {
     margin-top: 50px;
   }
+
 }
 
 @media only screen and (max-width: 480px) {
   #first {
     background: url(../images/badgekit_splashimage-480px-wide.png) #0193d4 center bottom no-repeat;
   }
+
   #first .text {
+    width: 100%;
+  }
+
+  #footer-links section {
     width: 100%;
   }
 }
