@@ -70,7 +70,8 @@ article p{
 
 #sign-up-form{
   width: 100%;
-  padding-top: 5px;
+  padding-top: 3px;
+  padding-left: 3px;
 }
 
 .form-cell{
@@ -100,6 +101,8 @@ article p{
 #sign-up-form span{
   margin-right: calc( 5% + 2px);
   line-height: 14px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #sign-up-form input{
@@ -126,6 +129,16 @@ article p{
   padding: 10px 35px;
   cursor: pointer;
 }
+
+#button-container button:disabled{
+  opacity: 0.2;
+  cursor: default;
+}
+
+#sign-up-form input:not(button).invalid-field {
+  border: 1px solid #F56464;
+}
+
 
 #thanks-for-signup {
   display: none;
@@ -167,6 +180,10 @@ footer {
 
 footer a {
   color: #4E4F53;
+}
+
+footer a:hover {
+  color: #63c6f4;
 }
 
 #footer-logo-container {
@@ -268,7 +285,7 @@ footer a {
   }
 
   #first {
-    background: url(../images/BadgeKit-Splash-Slide-640px.png) #0193d4 center bottom no-repeat;
+    background: url(../images/BadgeKit-Splash-Slide-640px.png) #039DD3 center bottom no-repeat;
   }
 
   #first .text {
@@ -279,7 +296,7 @@ footer a {
 
 @media only screen and (max-width: 480px) {
   #first {
-    background: url(../images/BadgeKit-Splash-Slide-480px.png) #0193d4 center 100% no-repeat;
+    background: url(../images/BadgeKit-Splash-Slide-480px.png) #039DD3 center 100% no-repeat;
     padding-bottom: 200px;
   }
 
