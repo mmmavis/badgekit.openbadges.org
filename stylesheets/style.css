@@ -70,6 +70,7 @@ article p{
 
 #sign-up-form{
   width: 100%;
+  padding-top: 5px;
 }
 
 .form-cell{
@@ -88,7 +89,8 @@ article p{
 }
 
 #sign-up-form input,
-#sign-up-form span{
+#sign-up-form span,
+#sign-up-form select{
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 5px;
@@ -123,6 +125,21 @@ article p{
   font-size: 12px;
   padding: 10px 35px;
   cursor: pointer;
+}
+
+#thanks-for-signup {
+  display: none;
+  text-align: center;
+}
+
+#thanks-for-signup h2 {
+  font-size: 32px;
+  color: #63c6f4;
+  margin-bottom: 0;
+}
+
+#thanks-for-signup p {
+  margin-top: 5px;
 }
 
 #first{

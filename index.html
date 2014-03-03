@@ -21,20 +21,22 @@
       <!-- Form ==================== -->
       <div id="form-container">
         <div class="container">
-          <form id="sign-up-form">
+          <form id="sign-up-form" method="get" action="http://mozilla.us3.list-manage.com/subscribe/post-json?u=f8dafe0b30ba8700ed344046e&id=504b95924f&c=?">
             <div id="form-fields">
+              <input type="hidden" name="u" value="f8dafe0b30ba8700ed344046e">
+              <input type="hidden" name="id" value="504b95924f">
               <div class="form-row">
                 <span class="form-cell form-col-1">Sign up now!</span>
-                <input class="form-cell form-col-2" type="email" name="email" placeholder="Enter your email" />
+                <input class="form-cell form-col-2" type="email" name="EMAIL" placeholder="Enter your email" required />
               </div>
               <div id="expandable-section" class="hidden">
                 <div class="form-row">
-                  <input class="form-cell form-col-1" type="text" name="org-name" placeholder="Organization name" />
-                  <input class="form-cell form-col-2" type="text" name="contact-name" placeholder="Contact name" />
+                  <input class="form-cell form-col-1" type="text" name="ORGNAME" placeholder="Organization name" required />
+                  <input class="form-cell form-col-2" type="text" name="CONTACTNAM" placeholder="Contact name" required />
                 </div>
                 <div class="form-row">
-                  <input class="form-cell form-col-1" type="text" name="org-size" placeholder="Organization size" />
-                  <input class="form-cell form-col-2" type="text" name="contact-position" placeholder="Contact position" />
+                  <input class="form-cell form-col-1" type="text" name="ORGSIZE" placeholder="Organization size" required />
+                  <input class="form-cell form-col-2" type="text" name="CONTACTPOS" placeholder="Contact position" required />
                 </div>
               </div>
             </div>
@@ -42,6 +44,16 @@
               <button class="form-cell" type="submit">Sign Up</button>
             </div>
           </form>
+          <div id="thanks-for-signup">
+            <h2>Thanks for signing up!</h2>
+            <p>We will contact you soon.  In the meantime learn<br /> more about <a href="http://openbadges.org/">Mozilla Open Badges</a></p>
+            <p style="color: orange"> --------------- <br />
+              [ ??? ] <br />
+              - Do we want to tell people to check their inbox for a confirmation email? <br />
+              - Do we want to display an error message in case the form failed to reach to MailChimp server?
+            </p>
+            <p style="color: red">[ FIX ME ] this sign up form is currently linked to a TEST list</p>
+          </div>
         </div>
       </div>
       <!-- Slide ==================== -->
@@ -108,8 +120,35 @@
     </div>
     <script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
     <script>
-      $("#sign-up-form input[name='email']").focus(function(){
+      $("#sign-up-form input[name='EMAIL']").focus(function(){
         $("#expandable-section").slideDown(300);
+      });
+
+      $("#sign-up-form").submit(function(event){
+        event.preventDefault();
+        $.ajax({
+          url: $(this).attr("action"),
+          data: $(this).serialize(),
+          type: $(this).attr('method'),
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          beforeSend: function(){
+          },
+          success: function(data, textStatus, jqXHR){
+          },
+          error: function(jqXHR, textStatus, errorThrown){
+          },
+          complete: function(jqXHR,textStatus){
+            console.log(jqXHR);
+            console.log(textStatus);
+            if ( textStatus != "success" ){
+              $("#thanks-for-signup").html("Oops!");
+            }
+            $("#sign-up-form").hide();
+            $("#thanks-for-signup").show();
+          }
+
+        });
       });
     </script>
   </body>
