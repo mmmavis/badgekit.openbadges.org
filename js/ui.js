@@ -32,6 +32,7 @@ $(document).ready(function(){
         }
         $("#sign-up-form").hide();
         $("#thanks-for-signup").show();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
       }
     });
   };
