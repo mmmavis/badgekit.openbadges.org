@@ -125,8 +125,8 @@ article p{
   border-radius: 5px;
   border: none;
   color: #fff;
-  font-size: 12px;
-  padding: 10px 35px;
+  font-size: 16px;
+  padding: 8px 35px;
   cursor: pointer;
 }
 
@@ -295,14 +295,24 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 480px) {
+  #form-container{
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
   #first {
-    background: url(../images/BadgeKit-Splash-Slide-480px.png) #039DD3 center 100% no-repeat;
-    padding-bottom: 200px;
+    background: url(../images/BadgeKit-Splash-Slide-480px.png) #1B9ED7 center 100% no-repeat;
+    padding-bottom: 100px;
   }
 
   #first .text {
     width: 100%;
     position: relative;
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
   }
 
   #footer-links section {
