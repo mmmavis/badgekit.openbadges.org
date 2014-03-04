@@ -1,6 +1,16 @@
 
 $(document).ready(function(){
 
+
+  function checkSmallScreen(minWidth){
+    if ( window.innerWidth < minWidth ){
+      $("#first p").after($("#sign-up-form"));
+    }
+  }
+
+  checkSmallScreen(600);
+
+
   var sendForm = function(event){
     event.preventDefault();
     $.ajax({

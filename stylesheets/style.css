@@ -302,13 +302,26 @@ footer a:hover {
 
   #first {
     background: url(../images/BadgeKit-Splash-Slide-480px.png) #1B9ED7 center 100% no-repeat;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
   }
 
   #first .text {
     width: 100%;
     position: relative;
     margin-top: 20px;
+  }
+
+  #first #sign-up-form {
+    width: 98%;
+  }
+
+  #first #sign-up-form input:not(button).invalid-field {
+    border: 2px solid #F56464;
+  }
+
+  #first #button-container button:disabled{
+    opacity: 0.3;
+    cursor: default;
   }
 
   h1 {
