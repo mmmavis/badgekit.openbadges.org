@@ -152,11 +152,13 @@ article p{
 }
 
 #sign-up-form #privacy #privacy-text {
-  font-size: 10px;
+  font-size: 11px;
   display: inline-block;
   float: left;
   width: 85%;
   margin-top: 5px;
+  position: relative;
+  top: -2px;
 }
 
 #sign-up-form #privacy div.invalid-field {
