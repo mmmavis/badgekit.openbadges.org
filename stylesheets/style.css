@@ -300,6 +300,10 @@ footer a:hover {
     padding-bottom: 30px;
   }
 
+  #thanks-for-signup h2 {
+    font-size: 25px;
+  }
+
   #first {
     background: url(../images/BadgeKit-Splash-Slide-480px.png) #1B9ED7 center 100% no-repeat;
     padding-bottom: 200px;
