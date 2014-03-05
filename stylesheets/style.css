@@ -145,6 +145,7 @@ article p{
   width: 95%;
   overflow: hidden;
   display: block;
+  padding-top: 9px;
 }
 
 #sign-up-form #privacy input[type='checkbox']{
