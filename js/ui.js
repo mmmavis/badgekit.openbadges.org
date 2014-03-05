@@ -53,15 +53,32 @@ $(document).ready(function(){
      }
   });
 
+  $("#privacy-check").click(function(event){
+    if ( validateForm($("#sign-up-form")) ){
+      $("#sign-up-form").unbind("submit", sendForm).bind("submit", sendForm);
+     }
+  });
+
   // form validator
   function validateForm(form){
     var fields = form.find("input");
     $.each(fields,function(i,field){
-      if ( !field.value || ( $(field).attr("type") == "email" && !validateEmail(field.value)) ) {
-        $(field).addClass("invalid-field");
-        form.find("button[type='submit']").attr("disabled","");
-      }else {
-        $(field).removeClass("invalid-field");
+      var validation = $(field);
+      // checkbox validation
+      if ( ($(field).attr("type") == "checkbox") ){
+        if ( !$(field).is(":checked") ){
+          $("#privacy div").addClass("invalid-field");
+          form.find("button[type='submit']").attr("disabled","");
+        }else {
+          $("#privacy div").removeClass("invalid-field");
+        }
+      }else{ // validation for other fields
+        if( !field.value || ( $(field).attr("type") == "email" && !validateEmail(field.value) ) ){
+            validation.addClass("invalid-field");
+            form.find("button[type='submit']").attr("disabled","");
+        }else {
+          $(field).removeClass("invalid-field");
+        }
       }
     });
 
