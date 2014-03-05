@@ -153,7 +153,6 @@ article p{
 
 #sign-up-form #privacy #privacy-text {
   font-size: 12px;
-  line-height: 12px;
   display: inline-block;
   float: left;
   width: 85%;
@@ -350,6 +349,10 @@ footer a:hover {
   #first #button-container button:disabled{
     opacity: 0.3;
     cursor: default;
+  }
+
+  #sign-up-form #privacy #privacy-text {
+    width: 90%;
   }
 
   h1 {
