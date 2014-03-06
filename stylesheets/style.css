@@ -102,7 +102,8 @@ article p{
   margin-right: calc( 5% + 2px);
   line-height: 14px;
   font-size: 18px;
-  font-weight: bold;
+  font-family: "Open Sans Semibold", Arial;
+  color: #5C5B56;
 }
 
 #sign-up-form input{
@@ -122,7 +123,7 @@ article p{
 }
 
 #button-container button{
-  background: #4E4F53;
+  background: #282828;
   border-radius: 5px;
   border: none;
   color: #fff;
@@ -138,13 +139,12 @@ article p{
 }
 
 #sign-up-form input:not(button).invalid-field {
-  border: 1px solid #F56464;
+  border: 2px solid #45B7B1;
 }
 
 #sign-up-form #privacy {
   width: 95%;
   overflow: hidden;
-  display: block;
   padding-top: 9px;
 }
 

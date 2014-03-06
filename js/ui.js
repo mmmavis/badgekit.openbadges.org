@@ -43,7 +43,9 @@ $(document).ready(function(){
 
   // expand the form when the e-mail field is in focus
   $("#sign-up-form input[name='EMAIL']").focus(function(){
-    $("#expandable-section").slideDown(300);
+    $("#expandable-section").slideDown(300,function(){
+      $("#privacy").show();
+    });
   });
 
   // validate the from as user types
